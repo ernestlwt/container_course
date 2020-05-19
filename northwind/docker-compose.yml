@@ -1,0 +1,27 @@
+version: "3"
+volumes:
+    northwind_vol:
+
+networks:
+    northwind_network:
+
+services:
+    northwind_db:
+        image: ernestlwt/northwind_db
+        build:
+            context: ./database
+        volumes:
+            - northwind_vol:/var/lib/mysql
+        networks:
+            - northwind_network
+
+    northwind_app:
+        image: ernestlwt/northwind_server
+        build:
+            context: ./server
+        environment:
+            - DB_HOST=northwind_db
+        ports:
+            - 8080:3000
+        networks:
+            - northwind_network
