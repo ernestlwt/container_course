@@ -25,3 +25,5 @@ services:
             - 8080:3000
         networks:
             - northwind_network
+        depends_on:
+            - northwind_db
