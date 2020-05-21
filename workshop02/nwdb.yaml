@@ -26,7 +26,7 @@ spec:
         metadata:
             name: nwdb-pod
             labels:
-                app: northwind
+                app: nwdb-pod
         spec:
             containers:
             - name: nwdb-container

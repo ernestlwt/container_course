@@ -26,7 +26,7 @@ spec:
         metadata:
             name: nwapp-pod
             labels:
-                app: northwind
+                app: nwapp-pod
         spec:
             containers:
             - name: nwapp-container
