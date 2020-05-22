@@ -8,14 +8,14 @@ metadata:
         kubernetes.io/ingress.class: "nginx"
 spec:
     rules:
-    - host: "v1.nwapp.104.248.98.238.nip.io"
+    - host: "v1.nwapp.104.248.99.25.nip.io"
       http:
         paths:
         - path: /
           backend: 
             serviceName: nwapp-svc
             servicePort: 80
-    - host: "v2.nwapp.104.248.98.238.nip.io"
+    - host: "v2.nwapp.104.248.99.25.nip.io"
       http:
         paths:
         - path: /
